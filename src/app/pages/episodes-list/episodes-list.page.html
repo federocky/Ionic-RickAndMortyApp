@@ -15,8 +15,6 @@
   <!-- <ion-card *ngIf="episode"> -->
     <ion-card *ngIf="episode$  | async as episode">
 
-    <img [src]="episode.image" width="100%" alt="">
-
     <ion-card-header>
       <ion-card-subtitle ion-text-center>{{ episode.air_date }}</ion-card-subtitle>
       <ion-card-title>{{ episode.name }}</ion-card-title>

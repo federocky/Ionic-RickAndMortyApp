@@ -1,17 +1,28 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title>Lista Episodios</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content fullscreen>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-searchbar (ionChange)="searchEpisode(texto.value)" #texto></ion-searchbar>
+
+  <ion-list>
+
+    <ion-item *ngFor="let location of locations" [routerLink]="['/locations-list', location.id]">
+
+      <ion-label>{{location.name}}</ion-label>
+      
+      <ion-label>
+        
+        <h2>{{ location.name}}</h2>
+        <h4>{{ location.dimension}}</h4>
+        <h3>{{ location.created}}</h3>
+
+        </ion-label> 
+      </ion-item>
+        
+</ion-list>
+
 </ion-content>
