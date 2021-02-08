@@ -25,7 +25,7 @@ export class Tab1Page implements OnInit{
       const temp: CharacterResults = res;
       this.characters = temp.results;
     },
-    
+    //controlamos los errores
     err => {
       console.log(err);
     });

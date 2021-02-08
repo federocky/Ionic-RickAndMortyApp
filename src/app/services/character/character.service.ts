@@ -9,7 +9,7 @@ import { Character } from 'src/app/models/character';
 })
 export class CharacterService {
 
-
+  //guardamos la url
   private url: string = 'https://rickandmortyapi.com/api/character';
 
   constructor(private http: HttpClient) { }

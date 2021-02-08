@@ -9,6 +9,7 @@ import { EpisodeResults } from 'src/app/models/episode-results';
 })
 export class EpisodesService {
 
+  //guardamos la url en la variable
   private url: string = 'https://rickandmortyapi.com/api/episode';
 
   constructor( private http: HttpClient ) { }
